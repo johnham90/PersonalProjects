@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>SpigotDesign</title>
+    <meta charset="utf-8"/>
+    <style type="text/css">
+      @font-face {
+        font-family: 'league_gothicCnRg';
+        src: url('League_Gothic/leaguegothic-condensedregular-webfont.woff2') format('woff2'),
+             url('League_Gothic/leaguegothic-condensedregular-webfont.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+      }
+      @font-face {
+        font-family: 'occupiedregular';
+        src: url('Occupied/occupied-webfont.woff2') format('woff2'),
+             url('Occupied/occupied-webfont.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+      }
+      body {
+        background-color: lightgrey;
+        font-family: "league_gothicCnRg"
+      }
+      body nav {
+        font-size: 10pt;
+      }
+      a {
+        text-decoration: none;
+      }
+      .spigot {
+        font-family: 'occupiedregular';
+      }
+      .center {
+        text-align: center;
+      }
+      .left {
+        float: left;
+      }
+      .right {
+        float: right;
+      }
+      .spigotlogo {
+        height: 100px;
+      }
+      #spigotdesign {
+        font-size: 25pt;
+        margin: 0;
+      }
+      #visualdesign {
+        font-size: 50pt;
+        margin: 0;
+        margin-top: 0.5em;
+        letter-spacing: 2pt;
+      }
+      #utah {
+        font-size: 30pt;
+        margin-bottom: 0.6em;
+        margin-top : 0.1em;
+        
+      }
+      .picture {
+        width: 40%;
+        margin: 3%
+      }
+      .row {
+        display: table-row;
+      }
+      .smallpic {
+        display: table-cell;
+        margin: 1em;
+        vertical-align: middle;
+      }
+      .text {
+        display: table-cell;
+        font-size: 25pt;
+        vertical-align: top;
+        padding-top: 0.5em;
+      }
+      @media screen and (min-width: 801px) {
+        .s1280 {
+          display: block;
+        }
+        .s800 {
+          display: none;
+        }
+        .leftSpigot {
+          float: left;
+          font-size: 25pt;
+          transform: translateY(-18px);
+        }
+        #white {
+          position: relative;
+          z-index: -1;
+          height: 40px;
+          transform: translateY(35px);
+          background-color: white;
+          border: 0;
+          border-top: 2px;
+          border-bottom: 2px;
+          border-style: solid;
+          border-color: grey;
+        }
+        #logo1280 {
+          height: 40px;
+          margin-left: 2em;
+          float: left;
+          transform: translateY(-50px);
+          margin-right: 0.5em;
+        }
+        #top1280 nav {
+          transform: translateY(-10px);
+          float: right;
+          height: 20px;
+          display: table;
+          width: 30%;
+          margin: 0 auto;
+          clear: right;
+        }
+        #top1280 nav ul {
+          display: table-row;
+        }
+        #top1280 nav li {
+          display: table-cell;
+          text-align: center;
+          margin: 0;
+          vertical-align: middle;
+        }
+        #spigotdesign {
+          display: none;
+        }
+        #visualdesign {
+          margin-top: 1.8em;
+        }
+        .circles {
+          margin: 3%;
+          clip-path: circle(49%);
+        }
+        #top800 {
+          display: none;
+        }
+        #bottomnav {
+          display: none;
+        }
+        #logo400 {
+          display: none;
+        }
+        #second400 {
+          display: none;
+        }
+        .s400 {
+          display: none;
+        }
+        .right {
+          float : right;
+        }
+        .bottomright {
+          width: 35%
+        }
+        .bottomleft {
+          width: 65%;
+        }
+      }
+      @media screen and (max-width: 800px) {
+        .s1280 {
+          display: none;
+        }
+        #top800 {
+          margin-bottom: 4.5em;
+          background-color: white;
+          transform: translateY(40px);
+          height: 40px;
+          border: 0;
+          border-top: 2px;
+          border-bottom: 2px;
+          border-style: solid;
+          border-color: grey;
+        }
+        #top800 nav {
+          height: 20px;
+          display: table;
+          transform: translateY(-32px);
+          width: 70%;
+          margin: 0 auto;
+        }
+        #top800 nav ul {
+          display: table-row;
+        }
+        #top800 nav li {
+          display: table-cell;
+          text-align: center;
+          margin: 0;
+          vertical-align: middle;
+        }
+        #bottomnav {
+          display: none;
+        }
+        #logo400 {
+          display: none;
+        }
+        .circles {
+          margin: 0.6%;
+          clip-path: circle(49%);
+        }
+        #second400 {
+          display: none;
+        }
+        .s400 {
+          display : none;
+        }
+        .left {
+          text-align: center;
+        }
+        .bottomleft {
+          width: 100%;
+        }
+        .bottomright {
+          width: 100%
+        }
+      }
+      @media screen and (max-width: 400px) {
+        .s1280 {
+          display: none;
+        }
+        #header400 {
+          background-color: white;
+          height: 40px;
+          transform: translateY(40px);
+          margin-bottom: 4.5em;
+          border: 0;
+          border-top: 2px;
+          border-bottom: 2px;
+          border-style: solid;
+          border-color: grey;
+        }
+        #logo400 {
+          display: block;
+          margin: 0 auto;
+          transform: translateY(-32px);
+        }
+        #top800 {
+          display: none;
+        }
+        #bottomnav {
+          display: block;
+          margin: 0 auto;
+          margin-top: 1em;
+        }
+        #bottomnav nav {
+          display: table;
+          margin: 0 auto;
+          width: 50%;
+        }
+        #bottomnav nav ul {
+          display: table-row;
+        }
+        #bottomnav nav li {
+          display: table-cell;
+          text-align: center;
+          vertical-align: middle;
+        }
+        .second800 {
+          display: none;
+        }
+        #second400 {
+          display: block;
+        }
+        .s400 {
+          display: block;
+        }
+        .pic400 {
+          float: left;
+          clear: left;
+          width: 95%;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <header id="top">
+      <pre class="s1280" id="white"> </pre>
+      <div id="logo1280" class="s1280">
+        <img src="spigot.png" alt="logo" class="spigotlogo">
+      </div>
+      <div class="leftSpigot spigot s1280">
+        <strong>spigot</strong>design
+      </div>
+      <div id="top1280" class="s1280">
+        <nav class="spigot">
+          <ul>
+            <li><a>SERVICES</a></li>
+            <li><a>WORK</a></li>
+            <li><a>BLOG</a></li>
+            <li><a>QUOTE</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div id="top800">
+        <nav class="spigot">
+          <ul>
+            <li><a>SERVICES</a></li>
+            <li><a>WORK</a></li>
+            <li><img src="spigot.png" class="spigotlogo" alt="logo"></li>
+            <li><a>BLOG</a></li>
+            <li><a>QUOTE</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div id="header400">
+        <img id="logo400" src="spigot.png" class="spigotlogo" alt="logo">
+      </div>
+        <p id="spigotdesign" class="spigot center"><strong>spigot</strong>design</p>
+      <div id="bottomnav">
+        <nav class="spigot">
+          <ul>
+            <li><a>SERVICES</a></li>
+            <li><a>WORK</a></li>
+            <li><a>BLOG</a></li>
+            <li><a>QUOTE</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <section>
+      <h1 class="center" id="visualdesign">VISUAL DESIGN &amp; WEB DEVELOPMENT</h1>
+      <h2 class="center" id="utah">FROM PARK CITY, UTAH</h2>
+      <div class="center">
+          <img src="https://dummyimage.com/85x85/8c2727/ffffff.jpg&text=DESIGN" alt="circle" class="circles">
+          <img src="https://dummyimage.com/85x85/d6ad32/fff.jpg&text=DEVELOP" alt="circle" class="circles">
+          <img src="https://dummyimage.com/85x85/4ca135/fff.jpg&text=SUPPORT" alt="circle" class="circles second800">
+          <img src="https://dummyimage.com/85x85/28d6b9/fff.jpg&text=HOST" alt="circle" class="circles second800">
+      </div>
+      <div class="center">
+        <span id="second400">
+          <img src="https://dummyimage.com/85x85/4ca135/fff.jpg&text=SUPPORT" alt="circle" class="circles">
+          <img src="https://dummyimage.com/85x85/28d6b9/fff.jpg&text=HOST" alt="circle" class="circles">
+        </span>
+      </div>
+      <div class="left bottomleft">
+        <img src="https://dummyimage.com/600x400/000/fff.jpg" alt="picture" class="picture pic400">
+        <img src="https://dummyimage.com/600x400/000/fff.jpg" alt="picture" class="picture pic400">
+      </div>
+    </section>
+    <aside class="right bottomright s1280">
+      <div class="row"><img src="https://dummyimage.com/80x80/000/fff.jpg" alt="picture" class="smallpic"> <p class="text">THE ADMIN BAR AND ABSOLUTE POSITIONING</p></div>
+      <div class="row"><img src="https://dummyimage.com/80x80/000/fff.jpg" alt="picture" class="smallpic"> <p class="text">NIBBLER: AWESOME WEBSITE TESTING</p></div>
+      <div class="row"><img src="https://dummyimage.com/80x80/000/fff.jpg" alt="picture" class="smallpic"> <p class="text">HOW TO GET GOOGLE TO LIKE YOU</p></div>
+    </aside>
+    <div class="left bottomleft">
+      <img src="https://dummyimage.com/600x400/000/fff.jpg" alt="picture" class="picture pic400">
+      <img src="https://dummyimage.com/600x400/000/fff.jpg" alt="picture" class="picture pic400">
+    </div>
+    <aside class="bottomright s800">
+      <div class="row"><img src="https://dummyimage.com/80x80/000/fff.jpg" alt="picture" class="smallpic"> <p class="text">THE ADMIN BAR AND ABSOLUTE POSITIONING</p></div>
+      <div class="row"><img src="https://dummyimage.com/80x80/000/fff.jpg" alt="picture" class="smallpic"> <p class="text">NIBBLER: AWESOME WEBSITE TESTING</p></div>
+      <div class="row"><img src="https://dummyimage.com/80x80/000/fff.jpg" alt="picture" class="smallpic"> <p class="text">HOW TO GET GOOGLE TO LIKE YOU</p></div>
+    </aside>
+    <footer>
+      <div id="footer">
+        <a href="#top">To top</a>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>D &amp; D Lab 5</title>
+    <meta charset="utf-8"/>
+    <style>
+      @font-face {
+        font-family: 'alegreya_scregular';
+        src: url('Lab 05/alegreyasc/alegreyasc-regular-webfont.woff2') format('woff2'),
+             url('Lab 05/alegreyasc/alegreyasc-regular-webfont.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+      }
+      
+      @font-face {
+        font-family: 'sabadoregular';
+        src: url('Lab 05/sabado/sabado_regular-webfont.woff2') format('woff2'),
+             url('Lab 05/sabado/sabado_regular-webfont.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+      }
+    </style>
+  </head>
+  <body>
+    
+  </body>
+  
+  <script>
+      /*<![CDATA[*/
+      var card = document.createElement("div");
+      var br = document.createElement("br");
+      
+      var topGrey = document.createElement("p");
+      topGrey.setAttribute("class", "margin0 width");
+      topGrey.style.backgroundColor = "grey"
+      topGrey.style.height = "1em";
+      
+      var topGold = document.createElement("p");
+      topGold.setAttribute("class", "margin0 width");
+      topGold.style.backgroundColor = "gold"
+      topGold.style.height = "0.5em";
+      
+      var topBlue = document.createElement("div");
+      topBlue.setAttribute("class", "margin0 width backBlue");
+      topBlue.style.height = "5em";
+      
+      var skull = document.createElement("div");
+      skull.style.cssFloat = "left";
+      skull.style.paddingTop = "0.5em";
+      var skullImg = document.createElement("img");
+      skullImg.src = "Lab 05/skull.jpeg";
+      skullImg.style.height = "50px";
+      skullImg.style.clipPath = "circle(50%)";
+      skullImg.style.filter = "grayscale(100%)";
+      skull.appendChild(skullImg);
+      var cE = document.createElement("p");
+      cE.innerHTML = "CE";
+      cE.setAttribute("class", "margin0 centerText white font1");
+      cE.style.fontSize = "10pt";
+      skull.appendChild(cE);
+      skull.style.paddingLeft = "1em";
+      topBlue.appendChild(skull);
+      
+      var epic = document.createElement("div");
+      epic.style.cssFloat = "right";
+      epic.style.height = "70px";
+      epic.style.width = "70px";
+      epic.style.clipPath = "circle(50%)";
+      epic.style.marginRight = "1em";
+      epic.style.backgroundColor = "orange";
+      epic.setAttribute("class", "centerText");
+      var epicText = document.createElement("p");
+      epicText.style.marginTop = "5px";
+      epicText.style.marginBottom = "0";
+      epicText.style.fontSize = "15pt";
+      epicText.innerHTML = "EPIC";
+      var epicNumber = document.createElement("p");
+      epicNumber.setAttribute("class", "margin0");
+      epicNumber.style.fontSize = "15pt";
+      epicNumber.innerHTML = "180";
+      var epicPoint = document.createElement("p");
+      epicPoint.setAttribute("class", "margin0 font1");
+      epicPoint.innerHTML = "POINTS";
+      epicPoint.style.fontSize = "10pt";
+      epic.appendChild(epicText);
+      epic.appendChild(epicNumber);
+      epic.appendChild(epicPoint);
+      topBlue.appendChild(epic);
+      
+      var nameOrc = document.createElement("div");
+      nameOrc.style.display = "in-block";
+      nameOrc.setAttribute("class", "centerText white");
+      nameOrc.style.paddingTop = "1.5em";
+      var orc = document.createElement("p");
+      orc.setAttribute("class", "margin0 font1 bold");
+      orc.innerHTML = "Orc Champion";
+      orc.style.fontSize = "20pt";
+      nameOrc.appendChild(orc);
+      topBlue.appendChild(nameOrc);
+      
+      var topGrey2 = document.createElement("p");
+      topGrey2.setAttribute("class", "margin0 width");
+      topGrey2.style.backgroundColor = "lightgrey";
+      topGrey2.style.height = "0.5em";
+      
+      var middle = document.createElement("div")
+      middle.setAttribute("class", "margin0 width");
+      middle.style.backgroundImage = "url('Lab 05/papyrus.jpg')";
+      middle.style.height = "30em";
+      
+      var tableMiddle = document.createElement("table");
+      tableMiddle.style.borderSpacing = "0 0.4em";
+      tableMiddle.style.paddingTop = "0.5em";
+      var row1 = tableMiddle.insertRow(0);
+      var level = row1.insertCell(0);
+      level.style.width = "4em";
+      level.style.clipPath = "polygon(0% 0%, 0% 100%, 100% 100%, 100% 34%, 78% 0%)"
+      level.setAttribute("class", "backBlue white centerText leftHeight");
+      var levelP = document.createElement("p");
+      levelP.setAttribute("class", "fontLeft margin0");
+      levelP.innerHTML = "LEVEL";
+      level.appendChild(levelP);
+      var s = document.createElement("p");
+      s.setAttribute("class", "margin0");
+      s.style.fontSize = "8pt";
+      s.innerHTML = "(save)";
+      level.appendChild(s);
+      var num = document.createElement("p");
+      num.setAttribute("class", "fontLeftNum margin0 padNum font1");
+      num.innerHTML = "10";
+      level.appendChild(num);
+      
+      var info = row1.insertCell(1);
+      info.style.verticalAlign = "top";
+      info.rowSpan = "5";
+      var infoContent = document.createElement("ul");
+      infoContent.style.margin = 0;
+      infoContent.style.listStyleType = "none";
+      infoContent.style.padding = 0;
+      infoContent.style.paddingLeft = "0.5em";
+      
+      var orcImg = document.createElement("img");
+      orcImg.src = "Lab 05/OrcChampion.png";
+      orcImg.style.cssFloat = "right";
+      orcImg.style.height = "250px";
+      orcImg.style.clipPath = "polygon(0% 0%, 100% 0%, 100% 100%, 27% 100%, 0% 71%)"
+      infoContent.appendChild(orcImg);
+      
+      var melee = document.createElement("li");
+      melee.style.fontSize = "15pt";
+      melee.setAttribute("class", "bold");
+      melee.innerHTML = "MELEE ATTACK";
+      melee.appendChild(br);
+      melee.innerHTML += "+20/+15 (30 magic)";
+      infoContent.appendChild(melee);
+      info.appendChild(infoContent);
+      var type = document.createElement("li");
+      type.setAttribute("class", "bold marginTop");
+      type.innerHTML = "TYPE";
+      infoContent.appendChild(type);
+      var typeC = document.createElement("li");
+      typeC.innerHTML = "Humanoid (Orc)";
+      infoContent.appendChild(typeC);
+      var spec = document.createElement("li");
+      spec.setAttribute("class", "bold marginTop");
+      spec.innerHTML = "SPECIAL ABILITIES";
+      infoContent.appendChild(spec);
+      var specC = document.createElement("li");
+      specC.setAttribute("class", "bold");
+      specC.innerHTML = "Cleave";
+      infoContent.appendChild(specC);
+      var con1 = document.createElement("li");
+      var agg = document.createElement("span");
+      agg.setAttribute("class", "bold");
+      agg.innerHTML = "Aggression +5";
+      con1.appendChild(agg);
+      con1.innerHTML += " (On its turn, this creature gets damage +5 whenever it is the first to activate in a round)"
+      infoContent.appendChild(con1);
+      var con2 = document.createElement("li");
+      var elf = document.createElement("span");
+      elf.setAttribute("class", "bold");
+      elf.innerHTML = "Elf Foe";
+      con2.appendChild(elf);
+      con2.innerHTML += " (Melee damage +5 against Elf enemies)"
+      infoContent.appendChild(con2);
+      var con3 = document.createElement("li");
+      var dwarf = document.createElement("span");
+      dwarf.setAttribute("class", "bold");
+      dwarf.innerHTML = "Dwarf Foe";
+      con3.appendChild(dwarf);
+      con3.innerHTML += " (Melee damage +5 against Dwarf enemies)"
+      infoContent.appendChild(con3);
+      var con4 = document.createElement("li");
+      var fav = document.createElement("span");
+      fav.setAttribute("class", "bold");
+      fav.innerHTML = "Favored";
+      con4.appendChild(fav);
+      con4.innerHTML += "&#9633;&#9633;&#9633; (immediate; an attack roll made against this creature is reduced by 5)";
+      infoContent.appendChild(con4);
+      
+      var row2 = tableMiddle.insertRow(1);
+      var speed = row2.insertCell(0);
+      speed.setAttribute("class", "backBlue white centerText leftHeight");
+      var speedP = document.createElement("p");
+      speedP.setAttribute("class", "fontLeft margin0");
+      speedP.innerHTML = "SPEED";
+      speed.appendChild(speedP);
+      var num = document.createElement("p");
+      num.setAttribute("class", "fontLeftNum margin0 padNum font1");
+      num.innerHTML = "10";
+      speed.appendChild(num); 
+      
+      var row3 = tableMiddle.insertRow(2);
+      var ac = row3.insertCell(0);
+      ac.setAttribute("class", "backBlue white centerText leftHeight");
+      var acP = document.createElement("p");
+      acP.setAttribute("class", "fontLeft margin0");
+      acP.innerHTML = "AC";
+      ac.appendChild(acP);
+      var num = document.createElement("p");
+      num.setAttribute("class", "fontLeftNum margin0 padNum font1");
+      num.innerHTML = "20";
+      ac.appendChild(num);
+      
+      var row4 = tableMiddle.insertRow(3);
+      var hp = row4.insertCell(0);
+      hp.setAttribute("class", "backBlue white centerText leftHeight");
+      var hpP = document.createElement("p");
+      hpP.setAttribute("class", "fontLeft margin0");
+      hpP.innerHTML = "HP";
+      hp.appendChild(hpP);
+      var num = document.createElement("p");
+      num.setAttribute("class", "fontLeftNum margin0 padNum font1");
+      num.innerHTML = "160";
+      hp.appendChild(num);
+      middle.appendChild(tableMiddle);
+      
+      var row5 = tableMiddle.insertRow(4);
+      row5.style.height = "4em";
+      
+      var bottomGrey = document.createElement("p");
+      bottomGrey.setAttribute("class", "margin0 width");
+      bottomGrey.style.backgroundColor = "lightgrey";
+      bottomGrey.style.height = "0.5em";
+      
+      var bottomBlue = document.createElement("div");
+      bottomBlue.setAttribute("class", "margin0 width backBlue");
+      bottomBlue.style.height = "2em";
+      var dD = document.createElement("p");
+      var dndLogo = document.createElement("img");
+      dndLogo.src = "Lab 05/dndlogo.png";
+      dndLogo.style.height = "10pt";
+      dD.setAttribute("class", "margin0 centerText white font2");
+      dD.style.fontSize = "15pt";
+      dD.style.paddingTop = "0.3em";
+      dD.innerHTML = "Dungeons";
+      dD.appendChild(dndLogo);
+      dD.innerHTML += "Dragons";
+      dD.style.verticalAlign = "middle";
+      bottomBlue.appendChild(dD);
+      
+      card.appendChild(topGrey);
+      card.appendChild(topGold);
+      card.appendChild(topBlue);
+      card.appendChild(topGrey2);
+      card.appendChild(middle);
+      card.appendChild(bottomGrey);
+      card.appendChild(bottomBlue);
+      document.body.appendChild(card);
+      
+      var margin0Class = document.getElementsByClassName("margin0");
+      for(let i = 0; i < margin0Class.length; i++) {
+          margin0Class[i].style.margin = 0;
+      }
+      
+      var boldClass = document.getElementsByClassName("bold");
+      for(let i = 0; i < boldClass.length; i++) {
+          boldClass[i].style.fontWeight = "bold";
+      }
+      
+      var backBlueClass = document.getElementsByClassName("backBlue");
+      for(let i = 0; i < backBlueClass.length; i++) {
+          backBlueClass[i].style.backgroundImage = "url('Lab 05/papyrusBlue.jpg')";
+      }
+      
+      var centerClass = document.getElementsByClassName("centerText");
+      for(let i = 0; i < centerClass.length; i++) {
+          centerClass[i].style.textAlign = "center";
+      }
+      
+      var whiteClass = document.getElementsByClassName("white");
+      for(let i = 0; i < whiteClass.length; i++) {
+          whiteClass[i].style.color = "white";
+      }
+      
+      var marginTopClass = document.getElementsByClassName("marginTop");
+      for(let i = 0; i < marginTopClass.length; i++) {
+          marginTopClass[i].style.marginTop = "1em";
+      }
+      
+      var fontLeftClass = document.getElementsByClassName("fontLeft");
+      for(let i = 0; i < fontLeftClass.length; i++) {
+          fontLeftClass[i].style.fontSize = "10pt";
+      }
+      
+      var fontLeftNumClass = document.getElementsByClassName("fontLeftNum");
+      for(let i = 0; i < fontLeftNumClass.length; i++) {
+          fontLeftNumClass[i].style.fontSize = "20pt";
+      }
+      
+      var padNumClass = document.getElementsByClassName("padNum");
+      for(let i = 0; i < padNumClass.length; i++) {
+          padNumClass[i].style.paddingTop = "0.1em";
+      }
+      
+      var leftHeightClass = document.getElementsByClassName("leftHeight");
+      for(let i = 0; i < leftHeightClass.length; i++) {
+          leftHeightClass[i].style.height = "4em";
+      }
+      
+      var widthClass = document.getElementsByClassName("width");
+      for(let i = 0; i < widthClass.length; i++) {
+          widthClass[i].style.width = "30em";
+      }
+      
+      var marginBotClass = document.getElementsByClassName("marginBot");
+      for(let i = 0; i < marginBotClass.length; i++) {
+          marginBotClass[i].style.marginBottom = "0.2em";
+      }
+      
+      var font1Class = document.getElementsByClassName("font1");
+      for(let i = 0; i < font1Class.length; i++) {
+          font1Class[i].style.fontFamily = "alegreya_scregular";
+      }
+      
+      var font2Class = document.getElementsByClassName("font2");
+      for(let i = 0; i < font2Class.length; i++) {
+          font2Class[i].style.fontFamily = "sabadoregular";
+      }
+      /*]]>*/
+    </script>
+
+</html>

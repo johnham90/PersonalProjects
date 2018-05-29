@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Magazine</title>
+		<meta charset="utf-8">
+		<style type="text/css">
+			body {
+				padding-left: 5em;
+				padding-right: 5em;
+				padding-top: 1.5em;
+			}
+			@font-face {
+				font-family: 'linguistics_proitalic';
+				src: url('fonts/linguistics/linguisticspro-italic-webfont.woff2') format('woff2'),
+						 url('fonts/linguistics/linguisticspro-italic-webfont.woff') format('woff');
+				font-weight: normal;
+				font-style: normal;
+			}
+			@font-face {
+				font-family: 'upboltersregular';
+				src: url('fonts/upbolters/upbolters-webfont.woff2') format('woff2'),
+						 url('fonts/upbolters/upbolters-webfont.woff') format('woff');
+				font-weight: normal;
+				font-style: normal;
+			}
+			@font-face {
+				font-family: 'maccrap_personal_usebold';
+				src: url('fonts/maccrap/maccrap_personal_use_-webfont.woff2') format('woff2'),
+						 url('fonts/maccrap/maccrap_personal_use_-webfont.woff') format('woff');
+				font-weight: normal;
+				font-style: normal;
+			}
+			@font-face {
+				font-family: 'typo_style_demoregular';
+				src: url('fonts/typo/typo_style_regular_demo-webfont.woff2') format('woff2'),
+						 url('fonts/typo/typo_style_regular_demo-webfont.woff') format('woff');
+				font-weight: normal;
+				font-style: normal;
+			}
+			@font-face {
+				font-family: 'fontaneroregular';
+				src: url('fonts/fontanero/fontanero-ffp-webfont.woff2') format('woff2'),
+						 url('fonts/fontanero/fontanero-ffp-webfont.woff') format('woff');
+				font-weight: normal;
+				font-style: normal;
+			}
+			.center {
+				text-align: center;
+				margin: 0.1em;
+			}
+			.justify {
+				text-align: justify;
+				text-align-last: justify;
+				margin: 0em;
+			}
+			.upbolter {
+				font-family: 'upboltersregular';
+				line-height: 1em;
+			}
+			.linguisticspro {
+				font-family: 'linguistics_proitalic';
+			}
+			.typo {
+				font-family: 'typo_style_demoregular';
+			}
+			.maccrap {
+				font-family: 'maccrap_personal_usebold';
+				font-size: 25pt;
+				font-weight: bold;
+			}
+			.fontanero {
+				font-family: 'fontaneroregular';
+			}
+			#spew {
+				margin-bottom: 0.3em;
+			}
+			#untrimmed {
+				font-size: 25pt;
+				letter-spacing: -0.1em;
+				margin-top: 0.2em;
+			}
+			#country {
+				font-size: 60pt;
+				line-height: 0.2em;
+				margin-top: 0.4em;
+			}
+			#coal {
+				font-size: 50pt;
+				letter-spacing: -0.02em;
+			}
+			#transmission {
+				font-size: 70pt;
+				letter-spacing: -0.05em;
+				line-height: 0.9em;
+			}
+			#firstLine {
+				letter-spacing: 0.3em;
+				background-color: darkgoldenrod;
+			}
+			#secondLine {
+				background-color: lightblue;
+				letter-spacing: 0.5em;
+				font-weight: bold;
+				margin-bottom: 0.5em;
+			}
+			#thirdLine {
+				background-color: maroon;
+				letter-spacing: 0.4em;
+			}
+			#fourthLine {
+				background-color: forestgreen;
+				letter-spacing: 0.5em;
+				font-weight: bold;
+				margin-top: 0em;
+			}
+			#firstSen{
+				font-size: 10pt;
+				font-weight: bold;
+				letter-spacing: 0.1em;
+				line-height: 0em;
+			}
+			#perio {
+				padding: 0em;
+			}
+			.white {
+				background-color: white;
+				padding-left: 1em;
+				padding-right: 1em;
+			}
+			.column {
+				column-count: 2;
+				column-gap: 4em;
+				font-size: 9pt;
+				margin-top: 1em;
+			}
+			#page {
+				text-align: right;
+				font-size: 25pt;
+				margin: 0em;
+				line-height: 1em;
+			}
+			.factory {
+				width: 3%;
+			}
+			.image {
+				line-height: 0em;
+				margin: 0em;
+			}
+		</style>
+	</head>
+	
+	<body>
+		<div class="center image">
+			<img src="images/factory1.jpg" class="factory" alt="factory">
+			&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+			<img src="images/factory2.jpg" class="factory" alt="factory">
+		</div>
+		<div class= "z">
+			<p class="center linguisticspro" id="firstLine">
+				<span class="white">FILTHY</span>
+			</p>
+			<p class="justify upbolter" id="coal">C O A L - F I R E D &ensp;P O W E R &ensp;P L A N T S</p>
+			<p class="justify maccrap" id="spew">S P E W &ensp;C A R B O N &ensp;I N T O &ensp;T H E &ensp;A I R<span class="upbolter">.</span></p>
+			<p class="center typo" id="secondLine">
+				<span class="white">A MISHMASH OF</span>
+			</p>
+			<p class="justify">
+				9 , 2 0 0 &ensp;G E N E R A T O R S &ensp;S T R E A M S &ensp;V I T A L &ensp;E L E C T R O N S &ensp;A L O N G &ensp;3 0 0 , 0 0 0 &ensp;M I L E S &ensp;O F &ensp;A G I N G , &ensp;I N E F F I C I E N T
+			</p>
+			<p class="justify upbolter" id="transmission">
+				T R A N S M I S S I O N &ensp;L I N E S.
+			</p>
+			<p class="center linguisticspro" id="thirdLine">
+				<span class="white">AND ONE</span>
+			</p>
+			<p class="justify upbolter" id="untrimmed">
+				U N T R I M M E D &ensp;T R E E &ensp;I N &ensp;T H E &ensp;W R O N G &ensp;P L A C E &ensp;C O U L D &ensp;P L U N G E &ensp;A &ensp;Q U A R T E R &ensp;O F
+			</p>
+			<p class="justify fontanero" id="country">
+				T H E &ensp;C O U N T R Y
+			</p>
+					<p class="center image">
+						<img src="images/factory3.jpg" class="factory" alt="factory">
+						&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;
+						<img src="images/factory4.jpg" class="factory" alt="factory">									&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;&ensp;&ensp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+						<img src="images/factory5.jpg" class="factory" alt="factory">
+					</p>
+			<p class="center typo" id="fourthLine">
+				<span class="white">INTO DARKNESS<span class="white upbolter" id="perio">.</span></span>
+			</p>
+		</div>
+		<div>
+			<p class="column justify">
+				<span class="linguisticspro" id="firstSen">THIS IS OUR ELECTRICAL GRID.</span> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Arcu cursus euismod quis viverra. Nulla aliquet enim tortor at auctor. Sed faucibus turpis in eu mi bibendum neque egestas congue. Consectetur purus ut faucibus pulvinar elementum. Volutpat ac tincidunt vitae semper quis. Elementum sagittis vitae et leo duis. Arcu non odio euismod lacinia at quis risus. Sed felis eget velit aliquet. Dui faucibus in ornare quam viverra. Tellus cras adipiscing enim eu turpis egestas. Hendrerit gravida rutrum quisque non. Viverra nibh cras pulvinar mattis. Egestas fringilla phasellus faucibus scelerisque. Ornare arcu odio ut sem nulla pharetra diam sit. Magna fringilla urna porttitor rhoncus dolor purus. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Arcu cursus euismod quis viverra. Nulla aliquet enim tortor at auctor. Sed faucibus turpis in eu mi bibendum neque egestas congue. Consectetur purus ut faucibus pulvinar elementum. Volutpat ac tincidunt vitae semper quis. Elementum sagittis vitae et leo duis. Arcu non odio euismod lacinia at quis risus. Sed felis eget velit aliquet. Dui faucibus in ornare quam viverra. Tellus cras adipiscing enim eu turpis egestas. Hendrerit gravida rutrum quisque non. Viverra nibh cras pulvinar mattis. Egestas fringilla phasellus faucibus scelerisque. Ornare arcu odio ut sem nulla pharetra diam sit. Magna fringilla urna porttitor rhoncus dolor purus. Ornare arcu odio ut sem nulla pharetra diam sit.
+			</p>
+		</div>
+		<p class="linguisticspro" id="page">
+			79&middot;&middot;&middot;
+		</p>
+	</body>
+</html>

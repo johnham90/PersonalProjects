@@ -1,0 +1,1 @@
+typeSearchIndex = [{"p":"q3","l":"Arithmetic"},{"p":"q1","l":"Change"},{"p":"q4","l":"Cube"},{"p":"q5","l":"Pack"},{"p":"q2","l":"SecondsConvert"}]
